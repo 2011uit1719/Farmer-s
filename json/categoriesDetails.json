@@ -1,0 +1,31 @@
+[{
+    "id": 1,
+	"class": "item-1",
+	"img": "img/category/1.jpg",
+    "name": "Wheat",
+    "lastText": "Wheat & its Products."
+  }, {
+    "id": 2,
+	"class": "item-2",
+	"img": "img/category/2.jpg",
+    "name": "Rice",
+    "lastText": "Rice & its Products."
+  }, {
+    "id": 3,
+	"class": "item-3",
+	"img": "img/category/3.jpg",
+    "name": "Dal",
+    "lastText": "Dal & its Products"
+  }, {
+    "id": 4,
+	"class": "item-4",
+	"img": "img/category/4.jpg",
+    "name": "Fruits",
+    "lastText": "Fruits & its Products"
+  }, {
+    "id": 5,
+	"class": "item-5",
+	"img": "img/category/5.jpg",
+    "name": "Others",
+    "lastText": "Other Products"
+  }]

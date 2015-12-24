@@ -1,0 +1,41 @@
+<ion-view view-title="Hello">
+    <!--<ion-header-bar align-title="center" class="bar-light">
+        <ion-nav-bar align-title="center">
+            <ion-nav-buttons>
+                <button class="button button-clear button-icon" ng-click="goBack()" ><i class="ion-chevron-left"></i></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+    </ion-header-bar>-->
+    <ion-header-bar class="bar-light bar-subheader">
+      <input type="search"
+             placeholder="Search Products..."
+             ng-model="search"
+             ng-focus="searchFocused = true"
+             ng-blur="searchFocused = false"
+             ng-change="scrollTop()"
+             style="font-family: sans-serif;font-size:18px"
+             class="full-width">
+    </ion-header-bar>
+    <ion-content>
+        <div class="cate-lv2">
+            <div class="card cate-lv2-item" ng-repeat="product in productByCate | filter:search">
+                <a class="item item-thumbnail-left item-text-wrap">
+                    <img ng-src={{product.img}} data-ng-click="pdpLocation({{product.id}})">
+
+                    <h2 data-ng-click="pdpLocation({{product.id}})">{{product.name}} </h2>
+
+                    <div class="price">{{product.price}}</div>
+                    <!--
+                    <div class="like" data-ng-init="count=0" data-ng-model="count"><i class="ion-ios-plus-outline" data-ng-click="count=count+1"></i> {{count}} <i class="ion-ios-minus-outline" data-ng-click="count=count-1"></i></div>
+                -->
+                    <div class="like">
+                        <i class="ion-ios-plus-outline" data-ng-click="changeQuantity(product.id,'inc')"></i>
+                        <i data-ng-if="selectedProducts[product.id]">{{selectedProducts[product.id]}}</i>
+                        <i data-ng-if="!selectedProducts[product.id]">0</i>
+                        <i class="ion-ios-minus-outline" data-ng-click="changeQuantity(product.id,'dec')"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
